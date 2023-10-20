@@ -27,7 +27,7 @@ public class Reservation {
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
 
-    private void updateDates(Date checkIn, Date checkOut){
+    public void updateDates(Date checkIn, Date checkOut){
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
@@ -35,6 +35,7 @@ public class Reservation {
     @Override
     public String toString(){
         return "Room "
+                + roomNumber
                 + ", check-in: "
                 + sdf.format(checkIn)
                 + ", check-out: "
