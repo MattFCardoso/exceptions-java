@@ -36,6 +36,7 @@ public class Program {
             checkOut = sdf.parse(sc.next());
 
             Date now = new Date();
+            
             if (checkIn.before(now) || checkOut.before(now)){
                 System.out.println("Error in reservation: must be future dates");
             } else if ((checkIn.before(now) || checkOut.before(now))){
